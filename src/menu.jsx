@@ -23,23 +23,18 @@ export const Menu = () => {
                         <div className="menu-desktop">
                             <ul className="menu">
                                 <li className="menu-item">
+                                    <a href="/careers" className="menu__link">
+                                        CAREERS
+                                    </a>
+                                </li>
+                                <li className="menu-item">
+                                    <a href="/press" className="menu__link">
+                                        PRESS
+                                    </a>
+                                </li>
+                                <li className="menu-item">
                                     <a href="/support" className="menu__link">
                                         SUPPORT
-                                    </a>
-                                </li>
-                                <li className="menu-item">
-                                    <a href="/support" className="menu__link">
-                                        ABOUT
-                                    </a>
-                                </li>
-                                <li className="menu-item">
-                                    <a href="/support" className="menu__link">
-                                        CONTACT
-                                    </a>
-                                </li>
-                                <li className="menu-item external-link">
-                                    <a href="https://shop.hexfork.org" className="menu__link">
-                                        SHOP
                                     </a>
                                 </li>
                                 <li className="menu-item external-link">
@@ -47,6 +42,17 @@ export const Menu = () => {
                                         FORUMS
                                     </a>
                                 </li>
+                                <li className="menu-item external-link">
+                                    <a href="https://shop.hexfork.org" className="menu__link">
+                                        MERCH
+                                    </a>
+                                </li>
+                                <li className="menu-item">
+                                    <a href="/support" className="menu__link">
+                                        CONTACT
+                                    </a>
+                                </li>
+
                                 <div className="menu-right">
                                     <li className="menu-item">
                                         <a className="menu-trigger" onClick={toggleMenu}>
@@ -72,9 +78,8 @@ export const Menu = () => {
                     <div className="menu-layer">
                         <div className="container">
                             <div className="menu__wrap menu-layer__top">
-
                                 <div className="content-inner">
-                                    <div className="menu__logo">
+                                    <div className="menu_logo">
                                         <div className="wrap-logo">
                                             <a href="/">
                                                 <img alt="logo" />

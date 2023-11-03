@@ -86,3 +86,9 @@ a {
   color: #101010;
   outline: 0;
 }
+
+
+.content .animation-row .-line, .content .animation-row-title {
+  margin-left: -35px;
+  padding-left: 35px;
+}
