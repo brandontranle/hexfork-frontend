@@ -16,10 +16,20 @@
     
 }
 
+.content>div {
+    position: relative;
+    z-index: 1;
+}
+
+.home-page-menu .container{
+    background-color: transparent;
+}
+
+
 
 
 .container{
-    background-color: transparent;
+    background-color: #fff;
     margin: 0 auto;
     padding: 0 40px;
     width: 100%;
@@ -209,19 +219,19 @@
 
 
 /* secondary menu (appearing from hamburger) */
-.menu-layer__top .menu__logo[data-v-b99592d4] {
+.menu-layer__top .menu__logo {
     left: 0;
     position: absolute;
     top: 5px
 }
 
-.menu-layer__top.menu__wrap[data-v-b99592d4] {
+.menu-layer__top.menu__wrap {
     margin: 0;
     padding-left: 0;
     padding-right: 0
 }
 
-.menu-layer__body[data-v-b99592d4] {
+.menu-layer__body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -269,7 +279,7 @@
 
 
 .opened{
-    background-color: #fff
+    background-color: transparent
 }
 
 .opened .menu-layer__cover{
@@ -354,6 +364,10 @@
     content: none
 }
 
+.header.games-header {
+    padding-top: calc(10rem + 70px)
+}
+
 
 
 }
@@ -372,7 +386,7 @@ a{
 
 .hero{
     top: 0;
-    height: 55em;
+    height: 45em;
     background-image: url("./assets/test.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -403,6 +417,10 @@ a{
 
 }
 
+.-decor--gray {
+    color: #9d9d9d;
+}
+
 .slide{
     background-color: transparent;
     height: 100%;
@@ -427,14 +445,33 @@ a{
 }
 
 .animation-row{
-    display: block;
-    position: relative;
+    /*display: block;
+    po  sition: relative;*/
     overflow: hidden;
 }
 
+.animation-row, .animation-row>span{
+    display: block;
+    position: relative;
+}
+
+.games span{
+    translate: none; rotate: none; scale: none; transform: translate(0px, 0%) rotate(0.001deg);
+}
 h1{
     margin-top: 0;
+    font-family: "Gilam Bold",sans-serif;
 }
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
 
 
 
@@ -492,6 +529,12 @@ a {
 
 
 
+@media screen and (min-width: 1170px) {
+.container {
+    width: 1170px;
+}
+}
+
 
 
 
@@ -500,7 +543,7 @@ a {
     overflow-x: visible;
     padding: 0;
     width: 970px;
-        }
+}
 
 .menu{
     align-items: center;
@@ -542,6 +585,9 @@ a {
 .hero-description{
     margin-top: 0;
     margin-bottom: 0;
+    font-family: "Gilam Book",sans-serif;
+    font-size: 16px;
+    color: white;
 }
 
 .btn{
@@ -556,6 +602,17 @@ a {
     position: relative;
     text-transform: uppercase;
     z-index: 1;
+}
+
+.btn:hover{
+    color: black;
+}
+
+
+
+.btn:hover:after {
+    background-color: #ffe177;
+    width: 75px
 }
 
 .btn.--large:hover .btn-stroke {
@@ -670,12 +727,22 @@ a {
 /* Social menu*/
 @media screen and (min-width: 970px) {
 .social {
-    bottom: 10rem;
+    bottom: 6rem;
     display: inline-block;
     left: 0;
     position: absolute;
     z-index: 10;
 }
+}
+
+
+.games .container{
+    display: flex;
+    /*flex-direction: column;*/
+}
+
+.container{
+    overflow-x: hidden;
 }
 
 
@@ -697,3 +764,593 @@ a {
 }
 
 
+@media screen and (min-width: 1452px) {
+body {
+    font-size: 18px;
+}
+}
+
+
+.social__wrap{
+    overflow: hidden
+}
+
+.social__trigger{
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    height: 22px;
+    justify-content: center;
+    padding: 0;
+    width: 22px;
+    background-color: transparent;
+}
+
+.social.opened .social__label{
+    transform: rotate(-90deg) translateX(0);
+}
+
+.social.opened .social-channels{
+    transform: translateY(0);
+}
+
+.social-channels{
+    display: flex;
+    flex-direction: column;
+    transform: translateY(150px);
+    transition: transform .3s ease
+}
+
+.social-channels__item{
+    align-items: center;
+    display: inline-flex;
+    height: 32px;
+    justify-content: center;
+    margin: 0 0 15px;
+    width: 22px;
+    z-index: 2;
+}
+
+.social-channels__item:last-child {
+    margin: 0 0 5px
+}
+
+.social-channels__link {
+    display: inline-block
+}
+
+.social-channels__link svg {
+    max-width: 100%
+}
+
+.social-channels__link svg path {
+    opacity: .65;
+    transition: opacity .3s ease
+}
+
+.social-channels__link svg:hover path {
+    opacity: 1
+}
+
+
+
+/**********************************/
+/*** GAMES SECTION ***************/
+
+.nav__button {
+    background: var(--hover-color);
+    border: none;
+    cursor: pointer;
+    height: 65px;
+    transition: background .3s ease;
+    width: 65px;
+}
+
+
+.games {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.games-info {
+    display: flex;
+    height: 610px;
+    position: relative
+}
+
+.games-header.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.games-header {
+    left: 0;
+    opacity: 0;
+    padding: 50px 0 40px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.games-header p {
+    margin: 0
+}
+
+p{
+    color: black;
+}
+
+h2{
+    color: black;
+}
+
+.games-header .btn {
+    margin-top: 20px
+}
+
+.animation-row {
+    overflow: hidden
+}
+
+.animation-row,.animation-row>span {
+    display: block;
+    position: relative
+}
+
+.games-platforms {
+    align-self: flex-end;
+    background: #272727;
+    flex-shrink: 0;
+    min-height: 195px;
+    padding: 30px 40px 0;
+    position: relative
+}
+
+.games-platforms,.games-platforms:before {
+    margin-left: -40px;
+    width: calc(100% + 80px)
+}
+
+.games-platforms:before {
+    background: rgba(39,39,39,.15);
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 0
+}
+
+@media screen and (min-width: 970px) {
+    .games-platforms:before {
+        margin-left:0;
+        width: 100%
+    }
+
+    
+}
+
+.games-platforms__wrap {
+    position: relative
+}
+
+.games-platforms__label {
+    color: #9d9d9d
+}
+
+.platforms {
+    left: 0;
+    margin-top: 30px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.platforms .animation-row span {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center
+}
+
+.platforms.active {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.platform {
+    align-items: center;
+    color: #fff;
+    display: inline-flex;
+    font-family: "Gilam SemiBold",sans-serif;
+    font-size: 16px;
+    opacity: .5;
+    text-transform: uppercase;
+    transition: opacity .3s ease
+}
+
+@media screen and (min-width: 970px) {
+    .platform {
+        font-size:12px
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    .platform {
+        font-size:14px
+    }
+}
+
+@media screen and (min-width: 1452px) {
+    .platform {
+        font-size:16px
+    }
+}
+
+.platform svg {
+    margin: 0 12px 6px 0
+}
+
+.platform:hover {
+    opacity: 1
+}
+
+.platform:hover svg path {
+    opacity: 1
+}
+
+.games-slider {
+    display: flex;
+    flex-direction: column;
+    height: 633px;
+    justify-content: space-between;
+    margin-left: -40px;
+    position: relative;
+    width: calc(100% + 80px);
+    z-index: 1
+}
+
+@media screen and (min-width: 970px) {
+    .games-slider {
+        margin-left:0;
+        width: 100%
+    }
+}
+
+.games-slider__cover {
+    background-position: 50%;
+    background-size: cover;
+    bottom: 0;
+    height: 440px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .5s ease;
+    width: 100%;
+    z-index: -1
+}
+
+.games-slider__cover:before {
+    background: rgba(39,39,39,.3);
+    background-image: linear-gradient(0deg,rgba(39,39,39,0) 42%,#272727 100%,#272727 0);
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%
+}
+
+.games-slider__cover.active {
+    opacity: 1
+}
+
+.slider {
+    height: 387px;
+    margin-top: 10px
+}
+
+.slider__slide {
+    height: 100%;
+    width: 270px
+}
+
+.slider__slide.is-selected {
+    height: 24.5rem;
+    width: 17.3rem;
+}
+
+.slider__slide.is-selected  img{
+    object-fit: cover;
+}
+
+
+.slider__slide.is-selected .slider__image {
+    transform: scale(1)
+}
+
+.slider__slide.is-selected .slider__image:before {
+    opacity: 0
+}
+
+.slider__image {
+    background-position: 50%;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    transform: scale(.74);
+    transition: transform .3s ease;
+    width: 100%
+}
+
+.slider__image:before {
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    transition: opacity .3s ease;
+    width: 100%
+}
+
+.disabled {
+    pointer-events: none
+}
+button:disabled {
+    background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
+    color: -internal-light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+    border-color: -internal-light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
+}
+
+ .nav {
+    align-self: flex-end
+}
+
+.nav{
+    /*align-self: flex-start;*/
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.nav:before {
+    background: rgba(0,0,0,.4);
+    left: 50%;
+    opacity: .4;
+    pointer-events: none;
+    width: 1px;
+    z-index: 1
+}
+
+.nav:after, .nav:before {
+    bottom: 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+}
+
+.nav:after{
+    background: var(--hover-color);
+    pointer-events: none;
+    right: 0;
+    width: 227px;
+    z-index: -1;
+}
+
+.nav:after, .nav:before {
+    bottom: 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+}
+
+@media screen and (min-width: 970px){
+.games-header.active {
+    display: flex;
+}
+
+.games-header {
+    flex-direction: column;
+    height: 75%;
+    justify-content: center;
+    padding: 0 25px 0 25px;
+    /*padding: 0 25rem 0 7rem;*/
+}
+
+
+.games-info,.games .container{
+    display:flex
+}
+
+
+
+.games-info {
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 38rem;
+    width: 47rem
+}
+
+.games-platforms {
+    margin: auto 0 0;
+    padding: 3rem 7rem;
+    width: 100%
+}
+
+.games-platforms:before {
+    left: 0
+}
+
+.platforms {
+    justify-content: flex-start;
+    margin-top: 3rem
+}
+
+.platforms .animation-row span {
+    gap: 3rem;
+    justify-content: flex-start
+}
+
+.platform img {
+    height: 2rem;
+    margin-right: 1.2rem;
+    width: auto
+}
+
+
+.games-slider {
+    flex-grow: 1;
+    height: 38rem;
+}
+
+.games-slider__cover {
+    height: 100%
+}
+
+.games-slider__cover:before {
+    background-image: linear-gradient(270deg,rgba(39,39,39,0) 25%,#272727 100%,#272727 0)
+}
+
+.slider {
+    height: 25rem;
+    margin-left: -9rem;
+    margin-top: 6rem;
+    width: 43rem;
+}
+
+.slider__slide {
+    width: 17.5rem
+
+}
+
+}
+
+
+
+
+svg{
+    height: 22px;
+    width: auto
+}
+
+li {
+    list-style: none;
+}
+
+li, ul {
+    margin: 0;
+    padding: 0;
+}
+
+button, input, select, textarea {
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+article, aside, footer, header, nav, section {
+    display: block;
+}
+
+button, select {
+    text-transform: none;
+}
+
+
+
+
+
+
+/******* FONTS ******/
+@font-face{
+    font-family: "Gilam SemiBold";
+    src: url("./assets/fonts/Gilam-Trial-SemiBold.ttf") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    font-family:"Gilam Book";
+    src: url("./assets/fonts/Gilam-Trial-Book.ttf") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: "Gilam Bold";
+    src: url("./assets/fonts/Gilam-Trial-Bold.ttf") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+
+
+
+@media screen and (min-width: 1452px) {
+.container {
+    width: 1452px;
+}
+
+}
+
+#app, .container {
+    position: relative;
+}
+
+
+.flickity-viewport {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.games .flickity-viewport {
+    touch-action: pan-y;
+}
+
+.games .flickity-slider{
+    left: 0px;
+    transform: translateX(0%);
+}
+.flickity-slider {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+#zero-slide{
+    position: absolute;
+    left: 0px;
+    transform: translateX(0%);
+}
+
+#first-slide{
+    position: absolute;
+    left: 0px;
+    transform: translateX(100%);
+}
+
+#second-slide{
+    position: absolute;
+    left: 0px;
+    transform: translateX(200%);
+}
+
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    cursor: default;
+}
