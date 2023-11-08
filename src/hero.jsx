@@ -45,7 +45,7 @@ export const Hero = () => {
                     </div>
                     <div className="animation-row">
                         <span>
-                            <a href="https://discord.gg/JsFHKk2Rx6" className="btn --large">
+                            <a href="https://www.guilded.gg/r/zzj166w5qR?i=4olaROMd" className="btn --large">
                                 <span className="btn-stroke"></span>
                                 <span className="btn-label"> Join us! </span>
                             </a>

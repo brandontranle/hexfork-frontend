@@ -23,7 +23,7 @@ export const Menu = () => {
                         <div className="menu-desktop">
                             <ul className="menu">
                                 <li className="menu-item">
-                                    <a href="/careers" className="menu__link">
+                                    <a href="https://www.guilded.gg/r/zzj166w5qR?i=4olaROMd" className="menu__link">
                                         CAREERS
                                     </a>
                                 </li>
