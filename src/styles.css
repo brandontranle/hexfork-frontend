@@ -1354,3 +1354,137 @@ html {
     box-sizing: border-box;
     cursor: default;
 }
+
+
+
+
+
+/**********************************/
+/*** GAMES SECTION ***************/
+
+/* ... Your existing CSS ... */
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    /* Stack nav items vertically */
+    .nav {
+        align-items: center;
+        padding: 0;
+    }
+
+    /* Stack game info items vertically and adjust widths */
+    .games-info {
+        flex-direction: column;
+        width: 100%; /* Full width */
+        height: 100%; /* Auto height to accommodate content */
+        padding: 50px; /* Add some padding */
+        display: block;
+    }
+
+    /* Adjust game platforms for mobile */
+
+
+    
+    .games-slider__cover{
+        display: none;
+    }
+
+    .games-slider__cover.active{
+        opacity: 1;
+        position: relative;
+        height: 100%;
+        display: block;
+    }
+
+    .games-slider{
+        position: relative;
+        height: 100%;
+    }
+
+    .games-platforms {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+        margin-left: 0;
+    }
+
+    /* Adjust platform list for mobile */
+    .platforms {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-top: 20px;
+        opacity: 1;
+        pointer-events: auto;
+        display: none;
+
+    }
+
+    .platforms.active{
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-top: 20px;
+        opacity: 1;
+        pointer-events: auto;
+        display: block;
+        width: 100%;
+    }
+
+    /* Update platform styles for mobile */
+    .platform {
+        font-size: 14px; /* Adjust font size */
+        margin-bottom: 10px; /* Add space between platforms */
+        width: 100%;
+    }
+
+    /* Adjust the game slider for mobile */
+    .games-slider {
+        position: relative;
+        height: 100px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Update the slider styles for mobile */
+    .slider {
+        height: auto;
+        width: 100%;
+    }
+
+    /* Adjust slider slide dimensions for mobile */
+    .slider__slide {
+        width: 100%; /* Full width */
+        margin-bottom: 20px; /* Add space between slides */
+    }
+
+    /* Make sure all slides are selectable on mobile */
+    .slider__slide.is-selected {
+        height: auto; /* Auto height to accommodate content */
+        width: 100%; /* Full width */
+    }
+
+    /* Adjustments to games header for mobile */
+    .games-header {
+        padding: 20px;
+        height: auto;
+        position: relative;
+        display: none;
+    }
+
+    .games-header.active {
+        display: block; /* Use block instead of flex to stack elements */
+        width: 100%;
+    }
+
+    .container{
+        flex-direction: column;
+        align-items: center; /* Center-align children horizontally */
+        width: 100%;
+        padding: 0;
+    }
+    /* ... Any other mobile-specific adjustments ... */
+}

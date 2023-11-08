@@ -19,9 +19,8 @@ export const Games = () => {
                     <div className="animation-row">
                         <span>
                             <p style={{ fontSize: "11px" }}>
-                                An ancient evil returned to Baldur’s Gate, intent on devouring it from the outside out. <br></br>
-                                The fate of Faerûn lies in your hands. Alone, you may resist. But together, you can overcome.
-                                Gather your party.
+                                Gather your party! Eat food, fight food.
+
                             </p>
 
                         </span>
