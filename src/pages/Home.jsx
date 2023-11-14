@@ -3,6 +3,7 @@ import Hero from "../hero"
 import "../styles.css"
 import "../App.css"
 import Games from "../games"
+import Shop from "../shop"
 
 
 export const Home = () => {
@@ -16,6 +17,9 @@ export const Home = () => {
                     </section>
                     <section className="games">
                         <Games />
+                    </section>
+                    <section className="shop">
+                        <Shop />
                     </section>
 
                 </div>
